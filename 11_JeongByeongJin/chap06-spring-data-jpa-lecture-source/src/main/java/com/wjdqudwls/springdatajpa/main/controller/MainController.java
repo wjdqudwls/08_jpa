@@ -13,4 +13,11 @@ public class MainController {
     return "main/main";
   }
 
+  /**
+   * queryMethod 페이지 조회
+   * - 반환형이 void인 경우
+   *   요청 주소 "menu/queryMethod" 로 forward
+   */
+  @GetMapping("/querymethod")
+  public void queryMethodPage(){}
 }

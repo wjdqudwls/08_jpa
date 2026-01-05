@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>detail</title>
+    <title>searchList</title>
 </head>
 <body>
-
-<table border="1">
+<h1>[[${param.menuPrice}]]원을 초과하는 메뉴 목록</h1>
+<table>
     <tr>
         <th>메뉴번호</th>
         <th>메뉴이름</th>
@@ -14,7 +14,7 @@
         <th>카테고리코드</th>
         <th>판매상태</th>
     </tr>
-    <tr>
+    <tr th:each="menu : ${ menuList }">
         <td th:text="${ menu.menuCode }"></td>
         <td th:text="${ menu.menuName }"></td>
         <td th:text="${ menu.menuPrice }"></td>
@@ -22,7 +22,6 @@
         <td th:text="${ menu.orderableStatus }"></td>
     </tr>
 </table>
-
 
 </body>
 </html>
